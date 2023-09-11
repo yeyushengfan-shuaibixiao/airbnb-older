@@ -1,0 +1,33 @@
+/* normalize.css   助消除不同的客户端渲染上的不一致*/
+*
+::after,
+::before{
+    box-sizing: inherit;
+    border: 0  ;
+    padding : 0;
+    margin: 0;
+}  
+body {
+    /* background-color: skyblue; */
+    font-family: Helvetica, Arial, sans-serif;
+   }
+ul,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+   vertical-align: top; 
+}
+.clearFix::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+/* 本项目 */
+body {
+    min-width: 1100px;
+}
